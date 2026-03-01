@@ -1,35 +1,48 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useState, useEffect } from 'react';
+import { ThemeProvider } from './contexts/ThemeContext';
+import LoadingScreen from './components/ui/LoadingScreen';
+import ParticleBackground from './components/ui/ParticleBackground';
+import Navbar from './components/layout/Navbar';
+import Hero from './components/sections/Hero';
+import About from './components/sections/About';
+import Skills from './components/sections/Skills';
+import Projects from './components/sections/Projects';
+import Certifications from './components/sections/Certifications';
+import Experience from './components/sections/Experience';
+import Activities from './components/sections/Activities';
+import Contact from './components/sections/Contact';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [loading, setLoading] = useState(true);
+
+  if (loading) {
+    return (
+      <ThemeProvider>
+        <LoadingScreen onComplete={() => setLoading(false)} />
+      </ThemeProvider>
+    );
+  }
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <ThemeProvider>
+      <div className="relative min-h-screen transition-colors duration-300">
+        <ParticleBackground />
+
+        <Navbar />
+
+        <main className="flex flex-col">
+          <Hero />
+          <About />
+          <Skills />
+          <Projects />
+          <Certifications />
+          <Experience />
+          <Activities />
+          <Contact />
+        </main>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </ThemeProvider>
+  );
 }
 
-export default App
+export default App;

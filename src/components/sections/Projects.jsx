@@ -1,0 +1,138 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Github, ExternalLink } from 'lucide-react';
+
+const projectsList = [
+    {
+        title: "RiceVision",
+        description: "Paddy Monitoring & Yield Prediction System using machine learning models to analyze environmental data and predict crop yields accurately.",
+        image: "https://images.unsplash.com/photo-1595801452140-1087b7a672da?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        tech: ["ML", "FastAPI", "PostgreSQL", "React"],
+        github: "#",
+        live: "#"
+    },
+    {
+        title: "SnakHut",
+        description: "Smart Restaurant POS System designed to handle complex orders, manage inventory, and streamline kitchen workflows globally.",
+        image: "https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        tech: ["Spring Boot", "PostgreSQL", "Docker", "React"],
+        github: "#",
+        live: "#"
+    },
+    {
+        title: "Grand Abode",
+        description: "A comprehensive React Web App demonstrating advanced routing, state management, and comprehensive testing methodologies.",
+        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        tech: ["React", "Routing", "Testing"],
+        github: "#",
+        live: "#"
+    },
+    {
+        title: "Infant Jesus Church",
+        description: "A modern, responsive informational website built to serve the community, providing event schedules and announcements.",
+        image: "https://images.unsplash.com/photo-1438032005730-c779502df39b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        tech: ["HTML", "CSS", "JavaScript"],
+        github: "#",
+        live: "#"
+    }
+];
+
+const Projects = () => {
+    return (
+        <section id="projects" className="py-20 relative bg-slate-50 dark:bg-brand-dark/50">
+            <div className="container mx-auto px-6">
+
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6 }}
+                    className="text-center mb-16"
+                >
+                    <h2 className="text-3xl md:text-5xl font-poppins font-bold text-slate-800 dark:text-slate-100 inline-block">
+                        Featured <span className="text-brand-purple">Projects</span>
+                    </h2>
+                    <div className="h-1 w-20 bg-brand-blue mx-auto mt-4 rounded-full"></div>
+                </motion.div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+                    {projectsList.map((project, idx) => (
+                        <motion.div
+                            key={project.title}
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, margin: "-50px" }}
+                            transition={{ duration: 0.5, delay: idx * 0.1 }}
+                            className="bg-white dark:bg-slate-900 rounded-2xl overflow-hidden shadow-xl border border-slate-100 dark:border-slate-800 group"
+                        >
+                            {/* Image Container */}
+                            <div className="relative h-64 overflow-hidden">
+                                <div className="absolute inset-0 bg-brand-blue/20 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
+                                <img
+                                    src={project.image}
+                                    alt={project.title}
+                                    className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 ease-in-out"
+                                />
+                            </div>
+
+                            {/* Content */}
+                            <div className="p-8">
+                                <h3 className="text-2xl font-poppins font-bold text-slate-800 dark:text-slate-100 mb-3 group-hover:text-brand-blue dark:group-hover:text-brand-blue transition-colors">
+                                    {project.title}
+                                </h3>
+                                <p className="text-slate-600 dark:text-slate-400 font-inter mb-6 line-clamp-3">
+                                    {project.description}
+                                </p>
+
+                                {/* Tech Stack */}
+                                <div className="flex flex-wrap gap-2 mb-8">
+                                    {project.tech.map((tech) => (
+                                        <span
+                                            key={tech}
+                                            className="px-3 py-1 text-xs font-mono font-medium text-brand-purple bg-brand-purple/10 rounded-full"
+                                        >
+                                            {tech}
+                                        </span>
+                                    ))}
+                                </div>
+
+                                {/* Actions */}
+                                <div className="flex items-center gap-4 mt-auto">
+                                    <a
+                                        href={project.github}
+                                        className="flex items-center gap-2 text-sm font-inter font-medium text-slate-700 dark:text-slate-300 hover:text-brand-blue dark:hover:text-brand-blue transition-colors bg-slate-100 dark:bg-slate-800 px-4 py-2 rounded-lg hover:bg-slate-200 dark:hover:bg-slate-700"
+                                    >
+                                        <Github size={18} />
+                                        Code
+                                    </a>
+                                    <a
+                                        href={project.live}
+                                        className="flex items-center gap-2 text-sm font-inter font-medium text-white bg-brand-blue hover:bg-blue-700 transition-colors px-4 py-2 rounded-lg shadow-md shadow-brand-blue/20"
+                                    >
+                                        <ExternalLink size={18} />
+                                        Live Demo
+                                    </a>
+                                </div>
+                            </div>
+                        </motion.div>
+                    ))}
+                </div>
+
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: 0.4 }}
+                    className="text-center mt-12"
+                >
+                    <a href="https://github.com/Chethi2003" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-brand-blue font-inter font-medium hover:text-brand-purple transition-colors">
+                        View more on GitHub <ExternalLink size={16} />
+                    </a>
+                </motion.div>
+
+            </div>
+        </section>
+    );
+};
+
+export default Projects;
