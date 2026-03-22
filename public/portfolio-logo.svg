@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="logoTitle logoDesc">
+  <title id="logoTitle">Chethina Portfolio Logo</title>
+  <desc id="logoDesc">Rounded square with a blue to violet gradient and a gold lightning mark.</desc>
+  <defs>
+    <linearGradient id="bgGrad" x1="24" y1="24" x2="232" y2="232" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1d4ed8"/>
+      <stop offset="1" stop-color="#7c3aed"/>
+    </linearGradient>
+    <linearGradient id="boltGrad" x1="94" y1="58" x2="162" y2="198" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fde047"/>
+      <stop offset="1" stop-color="#f59e0b"/>
+    </linearGradient>
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect x="16" y="16" width="224" height="224" rx="56" fill="#0b1220"/>
+  <rect x="24" y="24" width="208" height="208" rx="48" fill="url(#bgGrad)"/>
+  <rect x="24" y="24" width="208" height="208" rx="48" fill="#050914" opacity="0.28"/>
+
+  <path d="M144 54 95 132h34l-18 70 50-80h-35z" fill="url(#boltGrad)" filter="url(#softGlow)"/>
+
+  <path d="M58 68a70 70 0 1 0 0 120" fill="none" stroke="#ffffff" stroke-opacity="0.35" stroke-width="16" stroke-linecap="round"/>
+</svg>
