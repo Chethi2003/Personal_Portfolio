@@ -1,12 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Github, ExternalLink } from 'lucide-react';
+import riceVisionImg from '../../assets/RV.jpg';
+import snakHutImg from '../../assets/res.png';
 
 const projectsList = [
     {
         title: "RiceVision",
         description: "Paddy Monitoring & Yield Prediction System using machine learning models to analyze environmental data and predict crop yields accurately.",
-        image: "https://images.unsplash.com/photo-1595801452140-1087b7a672da?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        image: riceVisionImg,
         tech: ["ML", "FastAPI", "PostgreSQL", "React"],
         github: "#",
         live: "#"
@@ -14,7 +16,7 @@ const projectsList = [
     {
         title: "SnakHut",
         description: "Smart Restaurant POS System designed to handle complex orders, manage inventory, and streamline kitchen workflows globally.",
-        image: "https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        image: snakHutImg,
         tech: ["Spring Boot", "PostgreSQL", "Docker", "React"],
         github: "#",
         live: "#"

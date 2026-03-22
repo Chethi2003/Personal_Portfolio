@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { GraduationCap, BookOpen } from 'lucide-react';
+import journeyImg from '../../assets/IIT.jpeg';
 
 const About = () => {
     return (
@@ -42,12 +43,12 @@ const About = () => {
 
                         <div className="mt-8 relative w-full h-48 md:w-3/4 rounded-2xl overflow-hidden shadow-lg border border-slate-200 dark:border-slate-800 hidden md:block">
                             <img
-                                src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                src={journeyImg}
                                 alt="University Environment"
                                 className="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity duration-300"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-4">
-                                <span className="text-white font-inter font-medium">Informatics Institute of Technology</span>
+                                <span className="text-white font-inter font-medium">CodeRally - 2025 - Informatics Institute of Technology</span>
                             </div>
                         </div>
                     </motion.div>
