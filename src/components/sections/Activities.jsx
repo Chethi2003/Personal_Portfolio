@@ -5,13 +5,13 @@ import { Heart, Activity, Music, Code } from 'lucide-react';
 const activities = [
     {
         title: "IEEE Member",
-        type: "Professional",
+        type: "Society",
         icon: <Activity size={24} />,
         color: "from-blue-500 to-indigo-600"
     },
     {
         title: "IEEE RAS Member",
-        type: "Professional",
+        type: "Society",
         icon: <Activity size={24} />,
         color: "from-indigo-500 to-purple-600"
     },

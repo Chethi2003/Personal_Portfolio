@@ -5,6 +5,8 @@ import certi1Img from '../../assets/certi1.jpg';
 import certi2Img from '../../assets/certi2.jpg';
 import certi3Img from '../../assets/certi3.png';
 import certi4Img from '../../assets/certi4.jpg';
+import certi5Img from '../../assets/certi5.jpg';
+import certi6Img from '../../assets/certi6.jpg';
 
 const certsList = [
     {
@@ -35,13 +37,13 @@ const certsList = [
         title: "Introduction to Web APIs",
         issuer: "NASBA",
         date: "2025",
-        image: null
+        image: certi5Img
     },
     {
         title: "CodeRally Certificate of Participation",
         issuer: "IEEE CIS",
         date: "2025",
-        image: null
+        image: certi6Img
     }
 ];
 
