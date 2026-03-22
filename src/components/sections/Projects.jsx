@@ -1,8 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Github, ExternalLink } from 'lucide-react';
-import riceVisionImg from '../../assets/RV.jpg';
+import riceVisionImg from '../../assets/image.png';
 import snakHutImg from '../../assets/res.png';
+import grandAbodeImg from '../../assets/ga.png';
+import infantJesusImg from '../../assets/ijc.png';
 
 const projectsList = [
     {
@@ -10,32 +12,32 @@ const projectsList = [
         description: "Paddy Monitoring & Yield Prediction System using machine learning models to analyze environmental data and predict crop yields accurately.",
         image: riceVisionImg,
         tech: ["ML", "FastAPI", "PostgreSQL", "React"],
-        github: "#",
-        live: "#"
+        github: "https://github.com/RakinduNiwunhella/RiceVision",
+        live: "https://www.ricevisionlanka.com/"
     },
     {
         title: "SnakHut",
         description: "Smart Restaurant POS System designed to handle complex orders, manage inventory, and streamline kitchen workflows globally.",
         image: snakHutImg,
         tech: ["Spring Boot", "PostgreSQL", "Docker", "React"],
-        github: "#",
+        github: "https://github.com/Chethi2003/Smart-resturant-management-system",
         live: "#"
     },
     {
         title: "Grand Abode",
-        description: "A comprehensive React Web App demonstrating advanced routing, state management, and comprehensive testing methodologies.",
-        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        description: "A comprehensive React Web App demonstrating advanced routing and state management.",
+        image: grandAbodeImg,
         tech: ["React", "Routing", "Testing"],
-        github: "#",
-        live: "#"
+        github: "https://github.com/Chethi2003/Estate_Agent_Client-side_Web_Application",
+        live: "https://grandabode.vercel.app/"
     },
     {
         title: "Infant Jesus Church",
         description: "A modern, responsive informational website built to serve the community, providing event schedules and announcements.",
-        image: "https://images.unsplash.com/photo-1438032005730-c779502df39b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        image: infantJesusImg,
         tech: ["HTML", "CSS", "JavaScript"],
         github: "#",
-        live: "#"
+        live: "https://infantjesusnedimala.lk/"
     }
 ];
 
@@ -107,13 +109,15 @@ const Projects = () => {
                                         <Github size={18} />
                                         Code
                                     </a>
-                                    <a
-                                        href={project.live}
-                                        className="flex items-center gap-2 text-sm font-inter font-medium text-white bg-brand-blue hover:bg-blue-700 transition-colors px-4 py-2 rounded-lg shadow-md shadow-brand-blue/20"
-                                    >
-                                        <ExternalLink size={18} />
-                                        Live Demo
-                                    </a>
+                                    {project.title !== "SnakHut" && (
+                                        <a
+                                            href={project.live}
+                                            className="flex items-center gap-2 text-sm font-inter font-medium text-white bg-brand-blue hover:bg-blue-700 transition-colors px-4 py-2 rounded-lg shadow-md shadow-brand-blue/20"
+                                        >
+                                            <ExternalLink size={18} />
+                                            Live
+                                        </a>
+                                    )}
                                 </div>
                             </div>
                         </motion.div>

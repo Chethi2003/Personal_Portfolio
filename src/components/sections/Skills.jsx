@@ -94,12 +94,9 @@ const Skills = () => {
                             <div className="space-y-5">
                                 {category.skills.map((skill) => (
                                     <div key={skill.name}>
-                                        <div className="flex justify-between mb-1">
+                                        <div className="mb-1">
                                             <span className="font-inter text-sm font-medium text-slate-700 dark:text-slate-300">
                                                 {skill.name}
-                                            </span>
-                                            <span className="font-mono text-xs text-brand-blue">
-                                                {skill.level}%
                                             </span>
                                         </div>
                                         <div className="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-2 overflow-hidden">
