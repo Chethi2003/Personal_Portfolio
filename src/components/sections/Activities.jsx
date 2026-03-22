@@ -10,28 +10,34 @@ const activities = [
         color: "from-blue-500 to-indigo-600"
     },
     {
-        title: "IEEE Xtreme Participation",
-        type: "Competition",
-        icon: <Code size={24} />,
+        title: "IEEE RAS Member",
+        type: "Professional",
+        icon: <Activity size={24} />,
         color: "from-indigo-500 to-purple-600"
     },
     {
-        title: "CodeRally Participation",
+        title: "IEEEXtreme Participant",
         type: "Competition",
         icon: <Code size={24} />,
         color: "from-purple-500 to-pink-600"
     },
     {
+        title: "CodeRally Participant (IEEE CIS)",
+        type: "Competition",
+        icon: <Code size={24} />,
+        color: "from-pink-500 to-rose-600"
+    },
+    {
         title: "ABRSM Piano Grade 2",
         type: "Extracurricular",
         icon: <Music size={24} />,
-        color: "from-pink-500 to-rose-600"
+        color: "from-rose-500 to-orange-600"
     },
     {
         title: "Sangeeth Visharadha",
         type: "Extracurricular",
         icon: <Music size={24} />,
-        color: "from-rose-500 to-orange-600"
+        color: "from-orange-500 to-red-600"
     }
 ];
 

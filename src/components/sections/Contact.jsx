@@ -56,8 +56,8 @@ const Contact = () => {
                                     </div>
                                     <div>
                                         <h4 className="font-poppins font-medium text-slate-800 dark:text-slate-200">Email</h4>
-                                        <a href="mailto:kovida.fernando@gmail.com" className="text-slate-600 dark:text-slate-400 font-inter hover:text-brand-blue transition-colors">
-                                            kovida.fernando@gmail.com
+                                        <a href="mailto:chethina.20240331@iit.ac.lk" className="text-slate-600 dark:text-slate-400 font-inter hover:text-brand-blue transition-colors">
+                                            chethina.20240331@iit.ac.lk
                                         </a>
                                     </div>
                                 </div>
@@ -81,7 +81,7 @@ const Contact = () => {
                                     <div>
                                         <h4 className="font-poppins font-medium text-slate-800 dark:text-slate-200">Location</h4>
                                         <p className="text-slate-600 dark:text-slate-400 font-inter">
-                                            Sri Lanka
+                                            Dehiwala, Sri Lanka
                                         </p>
                                     </div>
                                 </div>

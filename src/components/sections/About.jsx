@@ -35,10 +35,10 @@ const About = () => {
                             My Journey
                         </h3>
                         <p className="text-slate-600 dark:text-slate-400 font-inter text-lg leading-relaxed mb-6">
-                            I am a driven and passionate Computer Science undergraduate studying at the Informatics Institute of Technology (IIT), affiliated with the University of Westminster. My primary focus revolves around solving complex computational problems, designing robust backend architectures, and analyzing data patterns to construct innovative software solutions.
+                            I am a driven and passionate Computer Science undergraduate at the Informatics Institute of Technology (IIT), affiliated with the University of Westminster. I focus on backend development, database systems, and data-driven technologies that solve real-world problems.
                         </p>
                         <p className="text-slate-600 dark:text-slate-400 font-inter text-lg leading-relaxed">
-                            With a solid foundation in modern software engineering principles, I constantly seek opportunities to learn and adapt to emerging technologies, aiming to bridge the gap between abstract concepts and real-world applications.
+                            I am currently seeking internship opportunities where I can apply my technical knowledge, contribute to impactful engineering work, and continue growing in dynamic product teams.
                         </p>
 
                         <div className="mt-8 relative w-full h-48 md:w-3/4 rounded-2xl overflow-hidden shadow-lg border border-slate-200 dark:border-slate-800 hidden md:block">
@@ -93,7 +93,8 @@ const About = () => {
                                     </h4>
                                     <p className="text-brand-purple font-medium mb-2">2020 – 2022</p>
                                     <p className="text-slate-600 dark:text-slate-400 font-inter">
-                                        Successfully completed secondary education with a strong foundation in analytical subjects, serving as a stepping stone into computer science.
+                                        St. Sebastian's College, Moratuwa <br />
+                                        Combined Mathematics: S | ICT: B | Physics: S | Z-Score: 0.1976
                                     </p>
                                 </div>
                             </div>

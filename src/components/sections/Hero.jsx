@@ -41,13 +41,15 @@ const Hero = () => {
                         </div>
 
                         <p className="text-slate-600 dark:text-slate-400 font-inter text-lg mb-8 max-w-xl leading-relaxed">
-                            Motivated Computer Science undergraduate passionate about backend systems, data-driven technologies, and building scalable applications.
+                            Motivated second-year Computer Science undergraduate at IIT (University of Westminster) with strong foundations in software development and database systems.
                         </p>
 
                         {/* Buttons & Socials */}
                         <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 mb-8">
                             <a
-                                href="#"
+                                href="/Chethina_Fernando_CV.pdf"
+                                target="_blank"
+                                rel="noreferrer"
                                 className="flex items-center gap-2 bg-brand-blue hover:bg-blue-700 text-white px-6 py-3 rounded-full font-inter font-medium transition-all transform hover:scale-105 shadow-lg shadow-brand-blue/30"
                             >
                                 <FileText size={20} />
@@ -70,7 +72,7 @@ const Hero = () => {
                             <a href="https://www.linkedin.com/in/fernandochethina2003" target="_blank" rel="noreferrer" className="text-slate-500 hover:text-brand-blue transition-colors transform hover:scale-110">
                                 <Linkedin size={28} />
                             </a>
-                            <a href="mailto:kovida.fernando@gmail.com" className="text-slate-500 hover:text-brand-blue transition-colors transform hover:scale-110">
+                            <a href="mailto:chethina.20240331@iit.ac.lk" className="text-slate-500 hover:text-brand-blue transition-colors transform hover:scale-110">
                                 <Mail size={28} />
                             </a>
                         </div>

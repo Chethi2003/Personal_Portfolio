@@ -9,33 +9,33 @@ import infantJesusImg from '../../assets/ijc.png';
 const projectsList = [
     {
         title: "RiceVision",
-        description: "Paddy Monitoring & Yield Prediction System using machine learning models to analyze environmental data and predict crop yields accurately.",
+        description: "Built a data-driven paddy monitoring and yield prediction platform integrating satellite data and ML models, with a FastAPI + PostgreSQL backend and React frontend.",
         image: riceVisionImg,
-        tech: ["ML", "FastAPI", "PostgreSQL", "React"],
+        tech: ["Python", "FastAPI", "PostgreSQL", "React", "AWS", "Vercel", "Render"],
         github: "https://github.com/RakinduNiwunhella/RiceVision",
         live: "https://www.ricevisionlanka.com/"
     },
     {
         title: "SnakHut",
-        description: "Smart Restaurant POS System designed to handle complex orders, manage inventory, and streamline kitchen workflows globally.",
+        description: "Developed a full-stack POS system with secure REST APIs, layered architecture (Controller-Service-Repository), and Dockerized backend services for reliable deployment.",
         image: snakHutImg,
-        tech: ["Spring Boot", "PostgreSQL", "Docker", "React"],
+        tech: ["Java", "Spring Boot", "PostgreSQL", "Docker", "Maven", "React"],
         github: "https://github.com/Chethi2003/Smart-resturant-management-system",
         live: "#"
     },
     {
         title: "Grand Abode",
-        description: "A comprehensive React Web App demonstrating advanced routing and state management.",
+        description: "React web app with persistent favourites using localStorage, reusable components, client-side routing, and automated testing with Vitest and React Testing Library.",
         image: grandAbodeImg,
-        tech: ["React", "Routing", "Testing"],
+        tech: ["React", "JavaScript", "CSS3", "Vitest", "RTL", "Vercel"],
         github: "https://github.com/Chethi2003/Estate_Agent_Client-side_Web_Application",
         live: "https://grandabode.vercel.app/"
     },
     {
         title: "Infant Jesus Church",
-        description: "A modern, responsive informational website built to serve the community, providing event schedules and announcements.",
+        description: "Designed and developed a responsive website to improve community communication with user-friendly navigation, announcements, and media galleries.",
         image: infantJesusImg,
-        tech: ["HTML", "CSS", "JavaScript"],
+        tech: ["HTML5", "CSS3", "JavaScript", "Netlify"],
         github: "#",
         live: "https://infantjesusnedimala.lk/"
     }

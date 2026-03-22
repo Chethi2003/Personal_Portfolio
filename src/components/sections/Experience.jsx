@@ -5,9 +5,9 @@ import { Briefcase } from 'lucide-react';
 const experiences = [
     {
         role: "Managing Director",
-        company: "Dharshana Trading Company",
+        company: "Dharshana Trading Company (Pvt) Ltd",
         period: "2023 – 2025",
-        description: "Spearheaded daily operations and strategic planning, managing a cross-functional team to oversee supply chain logistics, optimize inventory management, and drive business growth through data-informed decision-making.",
+        description: "Oversaw operations of an interior design and workshop business, managing design projects from concept to completion while coordinating teams, timelines, and delivery quality.",
     }
 ];
 

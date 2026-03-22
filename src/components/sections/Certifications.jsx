@@ -1,31 +1,47 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Award, X } from 'lucide-react';
+import certi1Img from '../../assets/certi1.jpg';
+import certi2Img from '../../assets/certi2.jpg';
+import certi3Img from '../../assets/certi3.png';
+import certi4Img from '../../assets/certi4.jpg';
 
 const certsList = [
     {
         title: "PostgreSQL Essential Training",
         issuer: "LinkedIn Learning",
-        date: "2024",
-        image: "https://images.unsplash.com/photo-1558025246-8e1008cb0a53?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        date: "Oct 03, 2025",
+        image: certi1Img
     },
     {
-        title: "NoSQL Essential Training",
+        title: "Introduction to NoSQL",
         issuer: "LinkedIn Learning",
-        date: "2024",
-        image: "https://images.unsplash.com/photo-1542626991-cbc4e32524cc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        date: "Oct 22, 2025",
+        image: certi2Img
     },
     {
         title: "Introduction to MongoDB",
-        issuer: "Coursera",
-        date: "2023",
-        image: "https://images.unsplash.com/photo-1606326608606-aa0b62935f2b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        issuer: "LinkedIn Learning",
+        date: "Oct 22, 2025",
+        image: certi3Img
     },
     {
         title: "Deep Learning Getting Started",
-        issuer: "Coursera",
-        date: "2023",
-        image: "https://images.unsplash.com/photo-1516321497487-e288fb19713f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        issuer: "LinkedIn Learning",
+        date: "Dec 07, 2025",
+        image: certi4Img
+    },
+    {
+        title: "Introduction to Web APIs",
+        issuer: "NASBA",
+        date: "2025",
+        image: null
+    },
+    {
+        title: "CodeRally Certificate of Participation",
+        issuer: "IEEE CIS",
+        date: "2025",
+        image: null
     }
 ];
 
@@ -66,20 +82,28 @@ const Certifications = () => {
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.4, delay: idx * 0.1 }}
-                            onClick={() => setSelectedCert(cert)}
-                            className="bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-md border border-slate-100 dark:border-slate-800 cursor-pointer group hover:shadow-xl hover:shadow-brand-blue/10 hover:border-brand-blue/50 transition-all"
+                            onClick={() => cert.image && setSelectedCert(cert)}
+                            className={`bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-md border border-slate-100 dark:border-slate-800 group hover:shadow-xl hover:shadow-brand-blue/10 hover:border-brand-blue/50 transition-all ${cert.image ? 'cursor-pointer' : 'cursor-default'}`}
                         >
                             <div className="h-40 overflow-hidden relative">
-                                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/10 transition-colors z-10 flex items-center justify-center">
-                                    <span className="opacity-0 group-hover:opacity-100 bg-white/90 text-slate-800 px-4 py-2 rounded-full text-sm font-semibold transform translate-y-4 group-hover:translate-y-0 transition-all font-inter shadow-lg">
-                                        View Certificate
-                                    </span>
-                                </div>
-                                <img
-                                    src={cert.image}
-                                    alt={cert.title}
-                                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                                />
+                                {cert.image ? (
+                                    <>
+                                        <div className="absolute inset-0 bg-black/40 group-hover:bg-black/10 transition-colors z-10 flex items-center justify-center">
+                                            <span className="opacity-0 group-hover:opacity-100 bg-white/90 text-slate-800 px-4 py-2 rounded-full text-sm font-semibold transform translate-y-4 group-hover:translate-y-0 transition-all font-inter shadow-lg">
+                                                View Certificate
+                                            </span>
+                                        </div>
+                                        <img
+                                            src={cert.image}
+                                            alt={cert.title}
+                                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                        />
+                                    </>
+                                ) : (
+                                    <div className="w-full h-full bg-gradient-to-br from-brand-blue/10 via-brand-purple/10 to-slate-100 dark:to-slate-800 flex items-center justify-center">
+                                        <Award size={42} className="text-brand-blue" />
+                                    </div>
+                                )}
                             </div>
                             <div className="p-5">
                                 <h3 className="text-lg font-poppins font-bold text-slate-800 dark:text-slate-100 mb-2 leading-tight">

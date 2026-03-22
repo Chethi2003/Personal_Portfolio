@@ -6,51 +6,37 @@ const skillCategories = [
     {
         title: "Languages",
         icon: <Code2 className="text-brand-blue" size={24} />,
-        skills: [
-            { name: "Java", level: 85 },
-            { name: "Python", level: 80 },
-            { name: "JavaScript", level: 90 },
-            { name: "SQL", level: 85 },
-        ]
+        accent: "brand-blue",
+        summary: "Core programming foundations",
+        skills: ["Java", "Python", "JavaScript", "SQL"]
     },
     {
         title: "Frontend",
         icon: <Layout className="text-brand-purple" size={24} />,
-        skills: [
-            { name: "HTML5", level: 95 },
-            { name: "CSS3", level: 90 },
-            { name: "React", level: 85 },
-            { name: "TailwindCSS", level: 90 },
-        ]
+        accent: "brand-purple",
+        summary: "Interactive and responsive UI development",
+        skills: ["HTML5", "CSS3", "React", "TailwindCSS"]
     },
     {
         title: "Backend",
         icon: <Server className="text-brand-blue" size={24} />,
-        skills: [
-            { name: "Spring Boot", level: 80 },
-            { name: "REST APIs", level: 90 },
-            { name: "Client-Server Architecture", level: 85 },
-        ]
+        accent: "brand-blue",
+        summary: "Scalable services and API engineering",
+        skills: ["Spring Boot", "REST APIs", "Client-Server Architecture"]
     },
     {
         title: "Databases",
         icon: <Database className="text-brand-purple" size={24} />,
-        skills: [
-            { name: "MySQL", level: 85 },
-            { name: "PostgreSQL", level: 80 },
-            { name: "MongoDB", level: 75 },
-        ]
+        accent: "brand-purple",
+        summary: "Relational and NoSQL data management",
+        skills: ["MySQL", "PostgreSQL", "MongoDB (Basic)"]
     },
     {
         title: "Tools",
         icon: <Wrench className="text-brand-blue" size={24} />,
-        skills: [
-            { name: "Docker", level: 70 },
-            { name: "Postman", level: 90 },
-            { name: "DBeaver / pgAdmin", level: 85 },
-            { name: "Anaconda", level: 75 },
-            { name: "Figma", level: 80 },
-        ]
+        accent: "brand-blue",
+        summary: "Productivity, design, and dev tooling",
+        skills: ["Docker", "Postman", "DBeaver", "pgAdmin", "Anaconda", "Figma"]
     }
 ];
 
@@ -80,35 +66,38 @@ const Skills = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: idx * 0.1 }}
-                            className="bg-white dark:bg-slate-900/80 p-6 rounded-2xl shadow-lg border border-slate-100 dark:border-slate-800 hover:-translate-y-2 transition-transform duration-300"
+                            className="group bg-white dark:bg-slate-900/80 p-6 rounded-2xl shadow-lg border border-slate-100 dark:border-slate-800 hover:-translate-y-2 hover:shadow-2xl transition-all duration-300"
                         >
-                            <div className="flex items-center gap-4 mb-6">
+                            <div className="flex items-center gap-4 mb-4">
                                 <div className="p-3 bg-slate-50 dark:bg-slate-800 rounded-lg">
                                     {category.icon}
                                 </div>
-                                <h3 className="text-xl font-poppins font-bold text-slate-800 dark:text-slate-100">
-                                    {category.title}
-                                </h3>
+                                <div>
+                                    <h3 className="text-xl font-poppins font-bold text-slate-800 dark:text-slate-100">
+                                        {category.title}
+                                    </h3>
+                                    <p className="text-xs font-inter text-slate-500 dark:text-slate-400">
+                                        {category.summary}
+                                    </p>
+                                </div>
                             </div>
 
-                            <div className="space-y-5">
-                                {category.skills.map((skill) => (
-                                    <div key={skill.name}>
-                                        <div className="mb-1">
-                                            <span className="font-inter text-sm font-medium text-slate-700 dark:text-slate-300">
-                                                {skill.name}
-                                            </span>
-                                        </div>
-                                        <div className="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-2 overflow-hidden">
-                                            <motion.div
-                                                initial={{ width: 0 }}
-                                                whileInView={{ width: `${skill.level}%` }}
-                                                viewport={{ once: true }}
-                                                transition={{ duration: 1, delay: 0.2 + (idx * 0.1), ease: "easeOut" }}
-                                                className={`h-2 rounded-full ${idx % 2 === 0 ? 'bg-brand-blue' : 'bg-brand-purple'}`}
-                                            />
-                                        </div>
-                                    </div>
+                            <div className="flex flex-wrap gap-2.5 pt-2">
+                                {category.skills.map((skill, skillIdx) => (
+                                    <motion.span
+                                        key={skill}
+                                        initial={{ opacity: 0, y: 8 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        viewport={{ once: true }}
+                                        transition={{ duration: 0.3, delay: 0.12 + (skillIdx * 0.04) }}
+                                        className={`px-3 py-1.5 rounded-full text-sm font-inter font-medium border transition-colors ${
+                                            category.accent === 'brand-purple'
+                                                ? 'text-brand-purple border-brand-purple/30 bg-brand-purple/10 group-hover:bg-brand-purple/15'
+                                                : 'text-brand-blue border-brand-blue/30 bg-brand-blue/10 group-hover:bg-brand-blue/15'
+                                        }`}
+                                    >
+                                        {skill}
+                                    </motion.span>
                                 ))}
                             </div>
                         </motion.div>
